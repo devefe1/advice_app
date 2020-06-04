@@ -35,7 +35,7 @@ class Advice extends Component {
             <div className = "advice">
                <main className = "card">
                    <h1 className = "heading">{advice}</h1>
-                   <button className = "button">
+                   <button className = "button" onClick={this.fetchAdvice}>
                        <span>GIVE ME ADVICE!</span>
                    </button>
                </main>

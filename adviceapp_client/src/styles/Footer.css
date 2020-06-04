@@ -1,0 +1,52 @@
+.logo{
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+    top: -155px;
+    height: 50%;
+    width: 50%;
+  }
+
+.footer {
+    font-size: 15px;
+	font-weight: lighter;
+	background-color: whitesmoke;
+	text-transform: uppercase;
+	text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  border-top: 4px solid black;
+}
+
+#footer-list {
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+    padding: 5px;
+    
+}
+
+#footer-links {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    transition: .2s ease-in;
+    margin-left: 150px;
+}
+
+#footer-links:hover {
+    color: blueviolet;
+    transform: scale(1.03);
+}
+
+.navLogoContainer{
+    margin-top: -10px;
+    height: 40px;
+  }
+
+  .shift{
+      margin-left: 50px;
+  }
