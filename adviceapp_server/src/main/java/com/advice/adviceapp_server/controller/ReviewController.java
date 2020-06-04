@@ -10,7 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.validation.List;
+import java.util.List;
+
 
 @RestController
 
@@ -30,7 +31,7 @@ public class ReviewController {
     public ResponseEntity<Review> getReviewById(@PathVariable(value = "id") Long reviewId)
         throws ResourceNotFoundException {
         Review review = reviewRepository.findById(reviewId)
-                .orElseThrow(() -> new ResourceNotFoundException()"Review not found" + reviewId)
+                .orElseThrow(() -> new ResourceNotFoundException("Review not found" + reviewId));
                 return ResponseEntity.ok().body(review);
     }
 
