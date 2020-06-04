@@ -5,7 +5,7 @@ import com.advice.adviceapp_server.exception.ResourceNotFoundException;
 import com.advice.adviceapp_server.model.Advice;
 import com.advice.adviceapp_server.repository.AdviceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
