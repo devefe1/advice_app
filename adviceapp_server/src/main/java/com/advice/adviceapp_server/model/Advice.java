@@ -1,7 +1,9 @@
 package com.advice.adviceapp_server.model;
 
+import javax.persistence.*;
+
 @Entity
-@Table (name = "saved_advice")
+@Table(name = "saved_advice")
 
 public class Advice {
     @Id
