@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-export class Advice extends Component {
+class Advice extends Component {
    state = { advice: ''};
 
 
@@ -33,12 +33,12 @@ export class Advice extends Component {
 
         return (
             <div className = "advice">
-               <div className = "card">
+               <main className = "card">
                    <h1 className = "heading">{advice}</h1>
-               </div>
+               </main>
             </div>
-        )
+        ); 
     }
 }
 
-export default Advice
+export default Advice;
