@@ -50,7 +50,6 @@ public class UserController {
 
         user.setEmail(userDetails.getEmail());
         user.setUserName(userDetails.getUserName());
-        user.setSign(userDetails.getSign());
         user.setPassword(userDetails.getPassword());
 
         final User updatedUser = userRepository.save(user);
