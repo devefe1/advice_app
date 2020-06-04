@@ -35,6 +35,9 @@ class Advice extends Component {
             <div className = "advice">
                <main className = "card">
                    <h1 className = "heading">{advice}</h1>
+                   <button className = "button">
+                       <span>GIVE ME ADVICE!</span>
+                   </button>
                </main>
             </div>
         ); 
