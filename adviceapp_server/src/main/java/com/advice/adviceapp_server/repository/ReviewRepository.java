@@ -1,4 +1,7 @@
 package com.advice.adviceapp_server.repository;
 
-public interface ReviewRepository {
+import com.advice.adviceapp_server.model.Review;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ReviewRepository extends JpaRepository<Review, Long> {
 }

@@ -1,4 +1,7 @@
 package com.advice.adviceapp_server.repository;
 
-public interface UserRepository {
+import com.advice.adviceapp_server.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User , Long> {
 }
