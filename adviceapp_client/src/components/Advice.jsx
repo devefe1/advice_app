@@ -7,23 +7,35 @@ export class Advice extends Component {
 
    //executes on the render of component
    componentDidMount() {
+       this.fetchAdvice();
    }
 
     fetchAdvice = () => {
         
         axios.get('https://api.adviceslip.com/advice')
         .then((response) => {
-            console.log(response);
+            const {advice} = response.data.slip;
+
+            this.setState({ advice });
         })
         .catch((error) => {
             console.log(error)
         });
+        
+       
+
     }
 
+
+
     render() {
+        const {advice} = this.state;
+
         return (
-            <div>
-                
+            <div className = "advice">
+               <div className = "card">
+                   <h1 className = "heading">{advice}</h1>
+               </div>
             </div>
         )
     }
