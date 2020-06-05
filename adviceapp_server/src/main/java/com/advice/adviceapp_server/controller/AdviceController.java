@@ -31,7 +31,7 @@ public class AdviceController {
 
 
     // delete advice
-    @DeleteMapping("/advice{id}")
+    @DeleteMapping("/advice/{id}")
     public Map<String, Boolean> deletedAdvice(@PathVariable(value = "id") Long adviceId)
             throws ResourceNotFoundException {
         Advice advice = adviceRepository.findById(adviceId)
