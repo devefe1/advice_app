@@ -2,13 +2,15 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Login from './components/Login';
 import Advice from './components/Advice';
-// import Review from './components/Review';
+import Reviews from './components/Reviews';
 import Footer from './components/Footer';
 import Signup from './components/Signup';
-// import MyAdvice from './components/MyAdvice';
+
 import './App.css';
 import './styles/Advice.css';
 import './styles/Login.css';
+import './styles/Reviews.css';
+
 
 function App() {
   return (
@@ -18,8 +20,8 @@ function App() {
                 <Route path='/' exact component={Login} />
               <Route path='/signup' component={Signup} />
               <Route path='/advice' component={Advice} />
-              {/* <Route path='/myadvice' component={MyAdvice} /> */}
-              {/* <Route path='/review' component={Review} />  */}
+
+              <Route path='/reviews' component={Reviews} /> 
           </Switch>
           <Footer/>
         </Router>

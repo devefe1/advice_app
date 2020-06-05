@@ -13,8 +13,8 @@ class Login extends Component {
 
     render() { 
         return ( 
-        <div>
-            <div className= "message">This app provides a single piece of advice, chosen at random daily with a little bit of humor :)</div>
+      <div className = 'page'>
+                <div id="message"><br/>This app provides a single <br/> piece of advice,<br/> chosen at random daily <br/>with a little bit of humor :)</div>
                 <div className='login-page' >
                     <div className='form' >
                         <form className='register-form' >
@@ -22,13 +22,12 @@ class Login extends Component {
                             <input type="password" placeholder="Password" />
                             <button type="submit" > Login </button>
                         </form>
-                        <br/>
-                        <br/>
-                        <br/>
                         <Link id='noAccount' to='/signup' > <p> Don't have an account? Sign up </p>  </Link>
+                       
+                 </div>
                     </div>
-            </div>
-        </div>
+          
+    </div>
          );
     }
 }

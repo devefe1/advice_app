@@ -34,7 +34,7 @@
     list-style: none;
     color: black;
     transition: .2s ease-in;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 #footer-links:hover {
@@ -48,5 +48,5 @@
   }
 
   .shift{
-      margin-left: 50px;
+      margin-left: 300px;
   }
