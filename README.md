@@ -23,3 +23,5 @@ Used React, Spring, Java , Axios, Link from React-Dom .
 
 
 ![wireframe](./wireframe/wireframe.png)
+
+![wireframe](./wireframe/wireframe.png)
