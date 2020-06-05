@@ -19,9 +19,6 @@ Used React, Spring, Java , Axios, Link from React-Dom .
 
 ###Problem i was not able to solve was getting the advices to render on myadvice page  it popped up and let me delete but the actual advices didn't show.
 
+
 ## Wireframe
-
-
-![wireframe](./wireframe/wireframe.png)
-
-![wireframe](./wireframe/wireframe.png)
+![wireframe](./adviceapp_client/wireframe/wireframe.png)
