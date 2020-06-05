@@ -22,7 +22,7 @@ class Login extends Component {
                             <input type="password" placeholder="Password" />
                             <button type="submit" > Login </button>
                         </form>
-                        <Link id='noAccount' to='/signup' > <p> Don't have an account? Sign up </p>  </Link>
+                        <Link id='noAccount' to='/signup' > <p> <br/> <br/><br/>  Don't have an account? Sign up </p>  </Link>
                        
                  </div>
                     </div>

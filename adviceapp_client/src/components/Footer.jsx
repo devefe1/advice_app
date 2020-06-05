@@ -16,7 +16,7 @@ const Footer = () => {
     <div className= "shift">
             <ul id='footer-list' >
                <Link id='footer-links' to='/advice' > <li> Advice </li> </Link>
-               
+               <Link id='footer-links' to='/myadvices'><li> My Advices</li></Link>
                
                <Link id='footer-links' to='/reviews' > <li> Reviews </li> </Link>
                <Link id='footer-links' to='/' > <li > &copy; by Mudi</li> </Link>

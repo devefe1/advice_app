@@ -7,7 +7,7 @@
     width: 50%;
   }
 
-.footer {
+  .footer {
     font-size: 15px;
 	font-weight: lighter;
 	background-color: whitesmoke;
@@ -26,7 +26,7 @@
     display: grid;
     grid-template-columns: repeat(4,20%);
     padding: 5px;
-    
+
 }
 
 #footer-links {
@@ -34,11 +34,11 @@
     list-style: none;
     color: black;
     transition: .2s ease-in;
-    margin-left: 100px;
+    margin-left: 150px;
 }
 
 #footer-links:hover {
-    color: blueviolet;
+    color:  rgba(22,76,167,0.6);
     transform: scale(1.03);
 }
 
@@ -48,5 +48,5 @@
   }
 
   .shift{
-      margin-left: 300px;
-  }
+      margin-left: 50px;
+  } 

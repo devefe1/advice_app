@@ -6,6 +6,13 @@
     
   }
 
+  .login-pages {
+    width: 360px;
+    padding-top: 15%;
+    padding-left: 65%;
+    margin: auto;
+    
+  }
   
   @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
@@ -19,7 +26,7 @@
     height: 250px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     opacity: 95%;
-   
+   margin-top: 40%;
   }
   
   .form input {
@@ -64,10 +71,18 @@
 
 
   #message{
-font-size: 40px;
+font-size: 35px;
 color: white;
 font-family: 'Abril Fatface', cursive;
 text-transform: uppercase;
 font-weight: bolder;
+margin-left: 10%;
+margin-top: 42%;
 
+  }
+
+  .page{
+    display: grid;
+    grid-template-columns: repeat( 2,42%);
+    /* margin-top: 30%; */
   }

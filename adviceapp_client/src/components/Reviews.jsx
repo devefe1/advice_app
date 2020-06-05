@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import '../styles/Reviews.css';
 
-class Forum extends Component {
+class Reviews extends Component {
     constructor(props) {
         super(props);
         this.state = { 
             forum: {
                 userName: '', 
-                post: ''
+                review: ''
             },
             updatedForum: []
          };
@@ -51,7 +51,7 @@ class Forum extends Component {
     editPost = async (id) => {
         const {forum} = this.state;
         try{
-            const updatemyPost = await axios.put(`/review/${id}` , forum);
+            const updatemyPost = await axios.put(`/reviews/${id}` , forum);
             let updatedPosts = [...this.state.forum].filter(i => i.id !== id)
             this.setState({forum: updatedPosts})
             console.log(updatemyPost.data)
@@ -72,14 +72,14 @@ class Forum extends Component {
                 <h1 id='title' > Leave a review Below! </h1>
                 <form className='posts' onSubmit = {this.handleSubmit} >
                     <input type="text" placeholder="User Name (Optional)" name="userName" value={forum.userName || ''} onChange = {this.handleChange} />
-                    <textarea type="text" placeholder="Write a review" name="post" value={forum.post || ''} onChange = {this.handleChange} />
+                    <textarea type="text" placeholder="Write a review" name="review" value={forum.review || ''} onChange = {this.handleChange} />
                     <button> Submit Review</button>
                 </form>
                 {this.state.updatedForum.map(post => (
                     <div key={post.id} className="forumWrap">
                         <ul>
                             <h3 > {post.userName} </h3>
-                            <p  > {post.post} </p>
+                            <p  > {post.review} </p>
                             <button className="updateEdit" onClick={() => this.editPost(post.id)}>Edit</button>
                         </ul>
                     </div>
@@ -89,4 +89,4 @@ class Forum extends Component {
     }
 }
  
-export default Forum;
+export default Reviews;

@@ -2,7 +2,17 @@ import React, { Component } from 'react'
 import axios from 'axios';
 
 class Advice extends Component {
-   state = { advice: ''};
+    constructor(props) {
+        super(props);
+
+   this.state = { advice: '',
+   savedAdvice: {
+       advices: ''
+   }
+};
+   this.saveAdvice = this.saveAdvice.bind(this)
+}
+
 
 
    //executes on the render of component
@@ -17,16 +27,32 @@ class Advice extends Component {
             const {advice} = response.data.slip;
 
             this.setState({ advice });
+
         })
+
+
+        .then ((response) => {
+            const {savedAdvice} = response.data.slip.advice;
+
+            this.setState({savedAdvice} )
+        })
+
+
         .catch((error) => {
             console.log(error)
         });
-        
-       
 
     }
 
-
+saveAdvice = async () =>{
+    let savedAdvice = {"advice": this.state.advices};
+    try {
+        await axios.post('/advice', savedAdvice)
+    
+    } catch (e) {
+        console.log(e)
+    }
+}
 
     render() {
         const {advice} = this.state;
@@ -35,9 +61,16 @@ class Advice extends Component {
             <div className = "advice">
                <main className = "card">
                    <h1 className = "heading">{advice}</h1>
+                
                    <button className = "button" onClick={this.fetchAdvice}>
                        <span>GIVE ME ADVICE!</span>
                    </button>
+                   <br/>
+                  < button className = "button" onClick={this.saveAdvice}>
+                       <span>SAVE ADVICE!</span>
+                   </button>
+                   
+                   
                </main>
             </div>
         ); 

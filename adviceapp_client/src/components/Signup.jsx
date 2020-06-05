@@ -39,7 +39,9 @@ handleSubmit = async (e) => {
 render () {
     const {user} = this.state;
     return (
-        <div className='login-page'>
+        <div className = 'page'>
+            <div id="message"><br/>This app provides a single <br/> piece of advice,<br/> chosen at random daily <br/>with a little bit of humor :)</div>
+        <div className='login-pages'>
             <div className= 'form'>
                 <form className= 'register-form' onSubmit = {this.handleSubmit} >
                     <input type="email" placeholder= "Email" name = "email" value = {user.email || ''} onChange={this.handleChange} />
@@ -49,6 +51,7 @@ render () {
                 </form>
                     <Link id='yes-account' to = '/' > <p> Already have an account? Log in </p></Link>
             </div>
+        </div>
         </div>
     );
   }
