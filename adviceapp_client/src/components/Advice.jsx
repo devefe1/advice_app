@@ -11,6 +11,7 @@ class Advice extends Component {
    }
 };
    this.saveAdvice = this.saveAdvice.bind(this)
+   this.fetchAdvice = this.fetchAdvice.bind(this)
 }
 
 
@@ -47,7 +48,7 @@ class Advice extends Component {
 saveAdvice = async () =>{
     let savedAdvice = {"advice": this.state.advices};
     try {
-        await axios.post('/advice', savedAdvice)
+        await axios.post('https://cors-anywhere.herokuapp.com/https://adviceapi.herokuapp.com/advice', savedAdvice)
     
     } catch (e) {
         console.log(e)

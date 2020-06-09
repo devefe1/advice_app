@@ -17,7 +17,7 @@ class Myadvices extends Component {
 
     componentDidMount = async () => {
         try {
-            const myAdvices = await axios.get('/advice');
+            const myAdvices = await axios.get('https://cors-anywhere.herokuapp.com/https://adviceapi.herokuapp.com/advice');
             this.setState({gottenAdvice: myAdvices.data});
             console.log(myAdvices.data)
 
@@ -30,7 +30,7 @@ class Myadvices extends Component {
     deletedAdvices = async (id) => {
         const {gottenAdvice} = this.state;
         try{
-            const deleted = await axios.delete(`/advice/${id}` , gottenAdvice);
+            const deleted = await axios.delete(`https://cors-anywhere.herokuapp.com/https://adviceapi.herokuapp.com/advice/${id}` , gottenAdvice);
             let deletedProducts = [...this.state.gottenAdvice].filter(i => i.id !== id)
             this.setState({gottenAdvice: deletedProducts})
             // this.setState({cartProducts: cart.data});

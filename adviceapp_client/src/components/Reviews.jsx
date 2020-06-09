@@ -19,7 +19,7 @@ class Reviews extends Component {
 
     componentDidMount = async () => {
         try {
-            const response = await axios.get('/review')
+            const response = await axios.get('https://cors-anywhere.herokuapp.com/https://adviceapi.herokuapp.com/review')
             this.setState({updatedForum: response.data})
             console.log(response.data); 
         } catch (e) {
@@ -40,7 +40,7 @@ class Reviews extends Component {
         e.preventDefault();
         const {forum} = this.state;
         try {
-            const newPost = await axios.post('/review', forum)
+            const newPost = await axios.post('https://cors-anywhere.herokuapp.com/https://adviceapi.herokuapp.com/review', forum)
             console.log(newPost.data);
         } catch (e) {
             console.log(e);
@@ -51,7 +51,7 @@ class Reviews extends Component {
     editPost = async (id) => {
         const {forum} = this.state;
         try{
-            const updatemyPost = await axios.put(`/reviews/${id}` , forum);
+            const updatemyPost = await axios.put(`https://cors-anywhere.herokuapp.com/https://adviceapi.herokuapp.com/reviews/${id}` , forum);
             let updatedPosts = [...this.state.forum].filter(i => i.id !== id)
             this.setState({forum: updatedPosts})
             console.log(updatemyPost.data)
