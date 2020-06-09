@@ -32,11 +32,11 @@ class Advice extends Component {
         })
 
 
-        .then ((response) => {
-            const {savedAdvice} = response.data.slip.advice;
+        // .then ((response) => {
+        //     const {savedAdvice} = response.data.slip.advice;
 
-            this.setState({savedAdvice} )
-        })
+        //     this.setState({savedAdvice} )
+        // })
 
 
         .catch((error) => {
