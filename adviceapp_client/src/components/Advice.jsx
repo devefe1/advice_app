@@ -18,7 +18,7 @@ class Advice extends Component {
 
    //executes on the render of component
    componentDidMount() {
-       this.fetchAdvice();
+       this.fetchAdvice;
    }
 
     fetchAdvice = () => {
